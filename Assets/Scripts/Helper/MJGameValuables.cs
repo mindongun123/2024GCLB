@@ -3,7 +3,7 @@ namespace MJGame.Extensions
 {
     public static class MJGameValue
     {
-        public static UnityAction<int> OnValueChanged = null;
+        public static UnityAction<int> OnValueScore = null;
         public static int ValueCoin;
     }
 
