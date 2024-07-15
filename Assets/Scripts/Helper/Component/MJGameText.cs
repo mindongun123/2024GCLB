@@ -25,7 +25,7 @@ namespace MJGame.Extensions
 
         public override void Help(float _value)
         {
-            TextLoading(_value.ToString());
+            TextLoading(((int)_value).ToString());
         }
     }
 }
