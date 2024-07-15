@@ -36,18 +36,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ScriptableObject\CardSO.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObject\GunSO.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObject\MonsterSO.cs" />
-     <Compile Include="Assets\Scripts\Helper\MJGameSave.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameText.cs" />
-     <Compile Include="Assets\Scripts\Helper\Interface\IShowText.cs" />
      <Compile Include="Assets\Scripts\Helper\Interface\ILoading.cs" />
-     <Compile Include="Assets\Scripts\Helper\MJGameValuables.cs" />
-     <Compile Include="Assets\Scripts\Helper\Component\MJGameSlider.cs" />
-     <Compile Include="Assets\Scripts\Helper\Interface\IHelpFunction.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObject\GunSO.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameUI.cs" />
+     <Compile Include="Assets\Scripts\Helper\Component\MJGameSlider.cs" />
+     <Compile Include="Assets\Scripts\Helper\Interface\IShowText.cs" />
+     <Compile Include="Assets\Scripts\Helper\Interface\IHelpFunction.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObject\CardSO.cs" />
+     <Compile Include="Assets\Scripts\Helper\MJGameSave.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObject\MonsterSO.cs" />
+     <Compile Include="Assets\Scripts\Helper\MJGameValuables.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameImage.cs" />
+     <Compile Include="Assets\Scripts\Helper\Controller\SingletonComponent.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
