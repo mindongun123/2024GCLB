@@ -35,4 +35,5 @@ ehthumbs.db
 
 /.vs
 Library
-UserSettings
+/UserSettings/
+TEST.md
