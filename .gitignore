@@ -33,7 +33,10 @@ ehthumbs.db
 *.userosscache
 *.sln.docstates
 
-/.vs
 Library
 /UserSettings/
 TEST.md
+
+.vs
+
+Logs
