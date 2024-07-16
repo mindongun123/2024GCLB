@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scripts/Model.meta
+guid: ae99bbe8c1a221341a11327fae84638e
+========
+<<<<<<< Updated upstream
+guid: 134b3cc4904f5144eabb183f6bbb9566
+=======
+guid: 13c5e682622c1004ca06f23093c8aba7
+>>>>>>> Stashed changes
+>>>>>>>> MPbranch:Assets/Resources/ScriptableObject/Monster.meta
+=======
 guid: aeb1f3e51d8beb642a2cec2062196401
+>>>>>>> MPbranch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
