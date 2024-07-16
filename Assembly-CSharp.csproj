@@ -58,11 +58,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Test\Test.cs" />
     <Compile Include="Assets\Scripts\Helper\Component\MJGameText.cs" />
+    <Compile Include="Assets\Scripts\LevelMonsterData.cs" />
+    <Compile Include="Assets\Scripts\DataSheetExcel.cs" />
     <Compile Include="Assets\Scripts\Helper\Interface\ILoading.cs" />
     <Compile Include="Assets\Scripts\ScriptableObject\GunSO.cs" />
     <Compile Include="Assets\Scripts\Helper\Component\MJGameUI.cs" />
     <Compile Include="Assets\Scripts\Helper\Component\MJGameSlider.cs" />
     <Compile Include="Assets\Scripts\Helper\Interface\IShowText.cs" />
+    <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\Helper\Interface\IHelpFunction.cs" />
     <Compile Include="Assets\Scripts\ScriptableObject\CardSO.cs" />
     <Compile Include="Assets\Scripts\Helper\Controller\SingletonComponent.cs" />
@@ -70,9 +73,7 @@
     <Compile Include="Assets\Scripts\ScriptableObject\MonsterSO.cs" />
     <Compile Include="Assets\Scripts\Helper\MJGameValuables.cs" />
     <Compile Include="Assets\Scripts\Helper\Component\MJGameImage.cs" />
-    <Compile Include="Assets\Scripts\DataSheetExcel.cs" />
-    <Compile Include="Assets\Scripts\Monster.cs" />
-    <Compile Include="Assets\Scripts\MonsterData.cs" />
+    <Compile Include="Assets\Scripts\LevelController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
