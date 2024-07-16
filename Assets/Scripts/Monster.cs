@@ -5,14 +5,14 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     
-    private MonsterData monsterData;
-    public Monster(MonsterData monsterData)
+    private LevelMonsterData levelMonsterData;
+    public Monster(LevelMonsterData monsterData)
     {
-        this.monsterData = monsterData;
+        this.levelMonsterData = monsterData;
     }
 
-    public void SetMonsterData(MonsterData monsterData)
+    public void SetMonsterData(LevelMonsterData monsterData)
     {
-        this.monsterData = monsterData;
+        this.levelMonsterData = monsterData;
     }
 }

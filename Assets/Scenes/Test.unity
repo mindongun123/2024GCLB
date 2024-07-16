@@ -234,9 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a3b8b81e5f35e4183ae13238cb2cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPositionsData: {fileID: 4900000, guid: c0e9bdf1d109452409f3a59d1e66a689, type: 3}
-  monsterPrefab: {fileID: 7833348241070235843, guid: 506e274eb5df3c545973da5692a58512, type: 3}
-  monsterArea: {fileID: 645565428}
+  monsterPositionsData: {fileID: 0}
+  monsterPrefab: {fileID: 0}
+  monsterArea: {fileID: 0}
+  levelGunData: {fileID: 0}
+  levelCardRewardData: {fileID: 0}
 --- !u!4 &55989954
 Transform:
   m_ObjectHideFlags: 0

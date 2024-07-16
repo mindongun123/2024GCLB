@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/MidniteOilSoftware.meta
 guid: e7265bcffd052474ea2b8ab3051f3c26
+=======
+<<<<<<< Updated upstream
+guid: e2e28aa8fb16e6448a3bf9ea0ac71576
+=======
+guid: 7f85f3d862d1d974f945f459aed9466b
+>>>>>>> Stashed changes
+>>>>>>> MPbranch:Assets/Resources/ScriptableObject.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

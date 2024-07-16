@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scripts/Controller.meta
 guid: 6ecde263c7a8ef847b532cca86defa6a
+========
+<<<<<<< Updated upstream
+guid: c539fe23dc56c004eb4d33dea5bfc058
+=======
+guid: bbbdcc22907874b41a4f618ea5d55e76
+>>>>>>> Stashed changes
+>>>>>>>> MPbranch:Assets/Resources/ScriptableObject/Gun.meta
+=======
+guid: 6a4f9fe724c901445b5744fc9f44a635
+>>>>>>> MPbranch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
