@@ -32,11 +32,3 @@ ehthumbs.db
 *.user
 *.userosscache
 *.sln.docstates
-
-Library
-/UserSettings/
-TEST.md
-ABS/
-.vs
-
-Logs
