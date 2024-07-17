@@ -202,7 +202,7 @@ namespace MidniteOilSoftware
         {
             var queue = GetPool(prefab);
             var go = Instantiate(prefab);
-            DontDestroyOnLoad(go);
+            // DontDestroyOnLoad(go);
             go.SetActive(setActive);
             go.name = prefab.name;
             return go;
@@ -212,7 +212,7 @@ namespace MidniteOilSoftware
             bool setActive)
         {
             GameObject go = Instantiate(prefab, position, rotation);
-            DontDestroyOnLoad(go);
+            // DontDestroyOnLoad(go);
             go.SetActive(setActive);
             go.name = prefab.name;
             return go;

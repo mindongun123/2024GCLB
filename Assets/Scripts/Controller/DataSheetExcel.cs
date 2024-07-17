@@ -11,20 +11,23 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
 
     [Header("Load Data Monster In Level")]
     public TextAsset monsterPositionsData;
-    private void LoadLevelMonsterPositionsFromCSV(List<LevelData> levelDatas)
+    private void LoadLevelMonsterPositionsFromCSV(List<LevelDT> levelDatas)
     {
         string[] data = monsterPositionsData.ToString().Split(new string[] { ",", "\n" }, System.StringSplitOptions.None);
-
         int numLevel = data.Length / 10;
         for (int level = 1; level <= numLevel; level++)
         {
             int start = (level - 1) * 10;
-            List<MonsterDT> monsterDatas = new List<MonsterDT>();
-            for (int pos = 1; pos <= 10; pos++)
+            Dictionary<Vector2Int, MonsterDT> monsterDatas = new Dictionary<Vector2Int, MonsterDT>();
+            for (int pos = 0; pos < 10; pos++)
             {
-                string dataMonster = data[start + pos - 1];
+                string dataMonster = data[start + pos];
+
                 MonsterDT monsterData = ExTractDataMonster(dataMonster);
-                monsterDatas.Add(monsterData);
+                if (monsterData != null)
+                {
+                    monsterDatas.Add(new Vector2Int(pos / 5, pos % 5), monsterData);
+                }
                 /*if (monsterData != null)
                 {
                     //SpawnMonsterAtPosition(monsterData, pos);
@@ -55,7 +58,7 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
         return null;
     }
 
-  
+
     #endregion
 
     #region LOAD LEVEL GUN
@@ -63,7 +66,7 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
     [Header("Load Data Gun")]
     public TextAsset levelGunData;
 
-    private void LoadLevelGunFromCSV(List<LevelData> levelDatas)
+    private void LoadLevelGunFromCSV(List<LevelDT> levelDatas)
     {
         string[] data = levelGunData.ToString().Split(new string[] { ",", "\n" }, System.StringSplitOptions.None);
         data = data.Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
@@ -89,7 +92,7 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
     [Header("Load Data Card Reward")]
     public TextAsset levelCardRewardData;
 
-    private void LoadLevelCardRewardFromCSV(List<LevelData> levelDatas)
+    private void LoadLevelCardRewardFromCSV(List<LevelDT> levelDatas)
     {
         string[] data = levelCardRewardData.ToString().Split(new string[] { ",", "\n" }, System.StringSplitOptions.None);
         data = data.Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
@@ -120,11 +123,12 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
     #region LOAD DATA CARD 
     #endregion
 
-    public void LoadDataFromExcel(List<LevelData> levelDatas)
+    public IEnumerator LoadDataFromExcel(List<LevelDT> levelDatas)
     {
         LoadLevelMonsterPositionsFromCSV(levelDatas);
         LoadLevelCardRewardFromCSV(levelDatas);
         LoadLevelGunFromCSV(levelDatas);
+        yield return null;
     }
 
 }
