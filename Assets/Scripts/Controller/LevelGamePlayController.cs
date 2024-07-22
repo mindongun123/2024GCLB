@@ -31,6 +31,7 @@ public class LevelGamePlayController : SingletonComponent<LevelGamePlayControlle
         foreach (var item in ls)
         {
             Monster monster = SingletonComponent<SpawnController>.Instance.SpawnMonsterAtPosition(item.Value, item.Key.x * 5 + item.Key.y);
+            monster.SetIdPosition(item.Key.x, item.Key.y);
             lsPositionMonsterInLevel.Add(item.Key, monster);
         }
         yield return null;

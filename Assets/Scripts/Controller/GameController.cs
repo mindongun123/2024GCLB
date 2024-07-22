@@ -14,6 +14,8 @@ public class GameController : SingletonComponent<GameController>
     /// <summary>
     /// List Monster, List Gun, List Card
     /// </summary>
+    
+
 
     private void Start()
     {
