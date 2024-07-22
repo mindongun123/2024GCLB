@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Helpers\HelperFunctions.cs" />
+     <Compile Include="Assets\Scripts\Controller\LevelGamePlayController.cs" />
+     <Compile Include="Assets\Scripts\Model\Card.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameText.cs" />
      <Compile Include="Assets\Scripts\Controller\SpawnController.cs" />
      <Compile Include="Assets\Scripts\View\Coin.cs" />
@@ -44,6 +46,7 @@
      <Compile Include="Assets\Scripts\Helper\Common\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\Helper\Interface\ILoading.cs" />
      <Compile Include="Assets\Scripts\Helper\Common\ConstString.cs" />
+     <Compile Include="Assets\Scripts\Model\CardDT.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameUILoading.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameSlider.cs" />
      <Compile Include="Assets\Scripts\Helper\Interface\IShowText.cs" />
@@ -51,6 +54,7 @@
      <Compile Include="Assets\Scripts\Helper\Common\SpawnerCommon.cs" />
      <Compile Include="Assets\Scripts\Controller\GameController.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Demo Scene\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Model\LevelDT.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Managers\ObjectPoolManager.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\IDespawnedPoolObject.cs" />
      <Compile Include="Assets\Scripts\Helper\Interface\IHelpFunction.cs" />
@@ -59,6 +63,7 @@
      <Compile Include="Assets\MidniteOilSoftware\Scripts\IRetrievedPoolObject.cs" />
      <Compile Include="Assets\Scripts\Helper\Controller\SingletonComponent.cs" />
      <Compile Include="Assets\Scripts\Helper\MJGameSave.cs" />
+     <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Helpers\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\Helper\MJGameValuables.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameImage.cs" />
@@ -66,11 +71,6 @@
      <Compile Include="Assets\Scripts\Helper\Component\MJGameUI.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Demo Scene\Scripts\DespawnAfterDelay.cs" />
      <Compile Include="Assets\Scripts\Model\Monster.cs" />
-     <Compile Include="Assets\Scripts\Model\LevelDT.cs" />
-     <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Model\CardDT.cs" />
-     <Compile Include="Assets\Scripts\Model\Card.cs" />
-     <Compile Include="Assets\Scripts\Controller\LevelGamePlayController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
