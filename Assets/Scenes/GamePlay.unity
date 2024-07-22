@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d847a0abdcb81044393f5c4e7fce67ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 7833348241070235843, guid: 506e274eb5df3c545973da5692a58512, type: 3}
+  monsterPrefab: {fileID: 6870318281051455047, guid: 0b54fa99e59c5ff4fa19517d05e0977c, type: 3}
   monsterArea: {fileID: 645565428}
 --- !u!4 &1454984866
 Transform:
