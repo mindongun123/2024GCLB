@@ -1,0 +1,90 @@
+
+small_Tree.png
+size: 681,311
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 114, 87
+  size: 435, 222
+  orig: 437, 224
+  offset: 1, 1
+  index: -1
+body_shadow
+  rotate: true
+  xy: 2, 64
+  size: 245, 110
+  orig: 252, 116
+  offset: 4, 3
+  index: -1
+finger_1_L
+  rotate: false
+  xy: 306, 13
+  size: 50, 72
+  orig: 52, 74
+  offset: 1, 1
+  index: -1
+finger_1_R
+  rotate: false
+  xy: 358, 13
+  size: 50, 72
+  orig: 52, 74
+  offset: 1, 1
+  index: -1
+finger_2_L
+  rotate: false
+  xy: 410, 14
+  size: 67, 71
+  orig: 69, 73
+  offset: 1, 1
+  index: -1
+finger_2_R
+  rotate: false
+  xy: 479, 14
+  size: 67, 71
+  orig: 69, 73
+  offset: 1, 1
+  index: -1
+finger_3_L
+  rotate: true
+  xy: 2, 2
+  size: 60, 72
+  orig: 63, 75
+  offset: 1, 2
+  index: -1
+finger_3_R
+  rotate: true
+  xy: 76, 2
+  size: 60, 72
+  orig: 63, 75
+  offset: 2, 2
+  index: -1
+hand_L
+  rotate: true
+  xy: 551, 8
+  size: 148, 128
+  orig: 292, 128
+  offset: 0, 0
+  index: -1
+hand_R
+  rotate: true
+  xy: 551, 158
+  size: 151, 128
+  orig: 292, 128
+  offset: 141, 0
+  index: -1
+hand_shadow_L
+  rotate: false
+  xy: 150, 11
+  size: 154, 74
+  orig: 161, 80
+  offset: 4, 3
+  index: -1
+hand_shadow_R
+  rotate: false
+  xy: 150, 11
+  size: 154, 74
+  orig: 161, 80
+  offset: 4, 3
+  index: -1
