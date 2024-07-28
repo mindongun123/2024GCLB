@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using MJGame;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class LevelGamePlayController : SingletonComponent<LevelGamePlayController>
 {
@@ -30,7 +31,7 @@ public class LevelGamePlayController : SingletonComponent<LevelGamePlayControlle
         Dictionary<Vector2Int, MonsterDT> ls = levelData.dictPosMonsterInLevel;
         foreach (var item in ls)
         {
-            Monster monster = SingletonComponent<SpawnController>.Instance.SpawnMonsterAtPosition(item.Value, item.Key.x * 5 + item.Key.y);
+            Monster monster = SingletonComponent<SpawnController>.Instance.SpawnMonsterAtPosition(item.Value, item.Key.x * 5 + item.Key.y, item.Key);
             lsPositionMonsterInLevel.Add(item.Key, monster);
         }
         yield return null;
@@ -42,4 +43,16 @@ public class LevelGamePlayController : SingletonComponent<LevelGamePlayControlle
         yield return null;
     }
 
+    public List<Monster> SearchMonster(Vector2Int keyPosition, CardDT card)
+    {
+        List<Monster> lsMonster = new List<Monster>();
+        foreach (var item in card.path)
+        {
+            if (lsPositionMonsterInLevel.ContainsKey(keyPosition + item))
+            {
+                lsMonster.Add(lsPositionMonsterInLevel[keyPosition + item]);
+            }
+        }
+        return lsMonster;
+    }
 }

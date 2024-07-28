@@ -1,15 +1,12 @@
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor.Drawers;
-using System.Collections;
-using System.Collections.Generic;
+using MJGame;
+using Spine.Unity;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 public class Monster : MonoBehaviour
 {
 
-   [SerializeField] MonsterAnimation monsterAnimation;
+    public MonsterAnimation monsterAnimation;
     private MonsterDT levelMonsterData;
+    public Vector2Int keyPosition;
 
 
     public Monster(MonsterDT monsterData)
@@ -17,8 +14,16 @@ public class Monster : MonoBehaviour
         this.levelMonsterData = monsterData;
     }
 
-    public void SetMonsterData(MonsterDT monsterData)
+    public void SetMonsterData(MonsterDT monsterData, Vector2Int keyPosition)
     {
         this.levelMonsterData = monsterData;
-    } 
+        this.keyPosition = keyPosition;
+    }
+
+    private void OnMouseDown()
+    {
+        SingletonComponent<HandleGamePlay>.Instance.SelectMonster(this);
+    }
+
+
 }

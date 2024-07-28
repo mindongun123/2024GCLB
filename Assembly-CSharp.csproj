@@ -38,21 +38,25 @@
   <ItemGroup>
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Helpers\HelperFunctions.cs" />
      <Compile Include="Assets\Scripts\Controller\LevelGamePlayController.cs" />
-     <Compile Include="Assets\Scripts\Model\Card.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\Card.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameText.cs" />
+     <Compile Include="Assets\Scripts\Model\Animation\MonsterStateAttack.cs" />
      <Compile Include="Assets\Scripts\Controller\SpawnController.cs" />
      <Compile Include="Assets\Scripts\View\Coin.cs" />
      <Compile Include="Assets\Scripts\Model\MonsterDT.cs" />
+     <Compile Include="Assets\Scripts\Helper\Common\Enums.cs" />
+     <Compile Include="Assets\Scripts\Model\Animation\MonsterStateHit.cs" />
      <Compile Include="Assets\Scripts\Helper\Common\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\Helper\Interface\ILoading.cs" />
      <Compile Include="Assets\Scripts\Helper\Common\ConstString.cs" />
-     <Compile Include="Assets\Scripts\Model\CardDT.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\CardDT.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameUILoading.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameSlider.cs" />
      <Compile Include="Assets\Scripts\Helper\Interface\IShowText.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Managers\LoadPersistentObjects.cs" />
      <Compile Include="Assets\Scripts\Helper\Common\SpawnerCommon.cs" />
      <Compile Include="Assets\Scripts\Controller\GameController.cs" />
+     <Compile Include="Assets\Scripts\Model\Animation\MonsterStateDie.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Demo Scene\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Model\LevelDT.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Managers\ObjectPoolManager.cs" />
@@ -61,8 +65,10 @@
      <Compile Include="Assets\Scripts\Controller\DataSheetExcel.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\DespawnedPoolObject.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\IRetrievedPoolObject.cs" />
+     <Compile Include="Assets\Scripts\Model\Animation\MJStateAnimation.cs" />
      <Compile Include="Assets\Scripts\Helper\Controller\SingletonComponent.cs" />
      <Compile Include="Assets\Scripts\Helper\MJGameSave.cs" />
+     <Compile Include="Assets\Scripts\Model\Animation\MonsterAnimation.cs" />
      <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Helpers\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\Helper\MJGameValuables.cs" />
@@ -70,17 +76,20 @@
      <Compile Include="Assets\Scripts\Helper\Common\GameSaveCommon.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameUI.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Demo Scene\Scripts\DespawnAfterDelay.cs" />
-     <Compile Include="Assets\Scripts\Model\Monster.cs" />
-     <Compile Include="Assets\Scripts\Model\Animation\MonsterStateDie.cs" />
-     <Compile Include="Assets\Scripts\Model\Animation\MonsterStateAttack.cs" />
-     <Compile Include="Assets\Scripts\Model\Animation\MonsterStateHit.cs" />
-     <Compile Include="Assets\Scripts\Model\Animation\MonsterAnimation.cs" />
      <Compile Include="Assets\Scripts\Model\Animation\MonsterStateIdle.cs" />
-     <Compile Include="Assets\Scripts\Model\Animation\MJStateAnimation.cs" />
+     <Compile Include="Assets\Scripts\Model\Monster.cs" />
+     <Compile Include="Assets\Scripts\Controller\HandleGamePlay.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\CardHelp.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\CardDummy.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\CardShuriken.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\CardShrededShot.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\CardHeal.cs" />
+     <Compile Include="Assets\Scripts\Model\Card\CardShield.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Spine\version.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\SpineResources\medium_Tree\medium_Tree.atlas.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\SpineResources\small_Tree\small_Tree.atlas.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -774,9 +783,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
-      <Project>{3ce9b626-69ce-f4f0-3a87-7ec40a5458b6}</Project>
-      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{2a231c81-be58-676c-be32-bdbc4094de01}</Project>
+      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity.csproj">
       <Project>{c339a8d7-fde0-b7bf-0f9b-df0648bb06d4}</Project>
@@ -786,9 +795,9 @@
       <Project>{98f93781-ec1b-b2de-b604-4a21a42d264e}</Project>
       <Name>spine-unity-examples</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{2a231c81-be58-676c-be32-bdbc4094de01}</Project>
-      <Name>spine-unity-examples-editor</Name>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
+      <Project>{3ce9b626-69ce-f4f0-3a87-7ec40a5458b6}</Project>
+      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
       <Project>{e00eb943-51b7-fbee-6694-943aca563a0b}</Project>

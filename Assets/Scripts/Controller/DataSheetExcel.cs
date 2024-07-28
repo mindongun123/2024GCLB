@@ -27,7 +27,7 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
                 MonsterDT monsterData = ExTractDataMonster(dataMonster);
                 if (monsterData != null)
                 {
-                    monsterDatas.Add(new Vector2Int(pos / 5, pos % 5), monsterData);
+                    monsterDatas.Add(new Vector2Int(pos / 5, pos % 5), monsterData);// x tren - y ngang
                 }
                 /*if (monsterData != null)
                 {

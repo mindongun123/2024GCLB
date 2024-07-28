@@ -37,4 +37,11 @@ public class MonsterAnimation : MonoBehaviour, IState, IStateAnimation
     {
         StateCurrent.UpdateState();
     }
+
+    public void AnimationSetState(MJStateAnimation state)
+    {
+        StateCurrent.ExitState();
+        StateCurrent = state;
+        StateCurrent.EnterState();
+    }
 }

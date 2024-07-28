@@ -20,20 +20,20 @@ public class MonsterStateIdle : MJStateAnimation
     }
     public override void UpdateState()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            kstate.StateCurrent = new MonsterStateAttack(kstate);
-            kstate.StateCurrent.EnterState();
-        }
-        else if (Input.GetMouseButtonDown(1))
-        {
-            kstate.StateCurrent = new MonsterStateHit(kstate);
-            kstate.StateCurrent.EnterState();
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            kstate.StateCurrent = new MonsterStateDie(kstate);
-            kstate.StateCurrent.EnterState();
-        }
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     kstate.StateCurrent = new MonsterStateAttack(kstate);
+        //     kstate.StateCurrent.EnterState();
+        // }
+        // else if (Input.GetMouseButtonDown(1))
+        // {
+        //     kstate.StateCurrent = new MonsterStateHit(kstate);
+        //     kstate.StateCurrent.EnterState();
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     kstate.StateCurrent = new MonsterStateDie(kstate);
+        //     kstate.StateCurrent.EnterState();
+        // }
     }
 }
