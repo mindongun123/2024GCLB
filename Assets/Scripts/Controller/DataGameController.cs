@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : SingletonComponent<GameController>
+public class DataGameController : SingletonComponent<DataGameController>
 {
     private int numLevel = 100;
 

@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CardDT", menuName = "Data/CardDT", order = 1)]
-public class CardDT : ScriptableObject
+[CreateAssetMenu(fileName = "CardSO", menuName = "Data/CardSO", order = 1)]
+public class CardSO : ScriptableObject
 {
     public Sprite _sprite;
     public List<Vector2Int> path = new List<Vector2Int>();

@@ -89,9 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9d3827fd68ce1439bf68924c19205d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 1
+  _nameCard: 4
   _sprite: {fileID: 21300000, guid: e9332d3c7b473e542a79ec64c61cc90b, type: 3}
-  _heal: 0
+  _heal: 10
 --- !u!114 &-5375322564023126916
 MonoBehaviour:
   m_ObjectHideFlags: 0

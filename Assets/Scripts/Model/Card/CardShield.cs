@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using MJGame;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardShield : MonoBehaviour, ICard
+public class CardShield : MonoBehaviour, ICard, ICardHelp
 {
+    [ReadOnly]
+    public EnumsNameCard _nameCard= EnumsNameCard.CardShield;
 
 
     public Sprite _sprite;
@@ -25,5 +28,10 @@ public class CardShield : MonoBehaviour, ICard
     {
                       SingletonComponent<HandleGamePlay>.Instance.HandleCard(this);
 
+    }
+
+    public void PlayCardHelp()
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using MJGame;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardShuriken : MonoBehaviour, ICard
+public class CardShuriken : MonoBehaviour, ICard, ICardHelp
 {
+    [ReadOnly]
+    public EnumsNameCard _nameCard = EnumsNameCard.CardShuriken;
 
     public Sprite _sprite;
 
@@ -23,6 +26,10 @@ public class CardShuriken : MonoBehaviour, ICard
     public void OnClickCard()
     {
         SingletonComponent<HandleGamePlay>.Instance.HandleCard(this);
+    }
 
+    public void PlayCardHelp()
+    {
+        throw new System.NotImplementedException();
     }
 }

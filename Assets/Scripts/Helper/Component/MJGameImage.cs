@@ -24,6 +24,18 @@ namespace MJGame.Extensions
             }
         }
 
+        private void OnEnable()
+        {
+            if (image == null)
+            {
+                image = GetComponent<Image>();
+            }
+            if (text == null)
+            {
+                text = GetComponentInChildren<MJGameText>();
+            }
+        }
+
         public override void Help(float _value)
         {
             image.fillAmount = _value;

@@ -17,9 +17,9 @@ public static class GameSaveCommon
         set => PlayerPrefs.SetInt(ConstString.LEVEL, value);
     }
 
-    public static List<Card> Card
+    public static List<CardNormal> Card
     {
-        get => MJGameSave.GetList<Card>(ConstString.CARD, new List<Card>());
+        get => MJGameSave.GetList<CardNormal>(ConstString.CARD, new List<CardNormal>());
         set => MJGameSave.SetList(ConstString.CARD, value);
     }
 }

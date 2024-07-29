@@ -15,19 +15,20 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
     public List<Monster> lsMonster = new List<Monster>();
 
     [Header("Select")]
-    [SerializeField] public Card cardSelect;
+    [SerializeField] public CardNormal cardSelect;
     // [SerializeField] public Gun cardSelect;
     [SerializeField] public Monster monsterSelect;
 
     public void HandleCard(ICard _card)
     {
-        if (_card is Card card)
+        if (_card is CardNormal cardNormal)
         {
-            this.cardSelect = card;
+            this.cardSelect = cardNormal;
         }
-        else
+        else if (_card is ICardHelp cardHelp)
         {
-            Debug.Log("SelectCardHelp");
+            // Test
+            cardHelp.PlayCardHelp();
         }
     }
 

@@ -26,6 +26,11 @@ public class MonsterAnimation : MonoBehaviour, IState, IStateAnimation
         set => stateCurrent = value;
     }
 
+    private void OnValidate()
+    {
+        SkeAnimation = GetComponent<SkeletonAnimation>();
+    }
+
     private void Start()
     {
         SkeAnimation = GetComponent<SkeletonAnimation>();

@@ -9,10 +9,10 @@ namespace MJGame.Extensions
     {
         public IEnumerator ChangeValueIE(float from, float to, float duration)
         {
+
             duration = Mathf.Abs(to - from) * 2.0f / 100;
             duration = Mathf.Min(Mathf.Max(duration, 1f), 2.0f);
             float timeElapsed = 0.0f;
-            Debug.Log("duration: " + duration);
 
             while (timeElapsed < duration)
             {

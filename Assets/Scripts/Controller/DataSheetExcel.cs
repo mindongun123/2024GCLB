@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using MJGame;
 using UnityEngine;
@@ -10,7 +9,7 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
 
     #region LOAD LEVEL MONSTER POSITIONS
 
-    [Header("Load Data Monster In Level")]
+    [Header("Load Data Monster In Level"), Tooltip("danh sach monster va vi tri cua no trong man choi")]
     public TextAsset monsterPositionsData;
     private void LoadLevelMonsterPositionsFromCSV(List<LevelDT> levelDatas)
     {
@@ -64,7 +63,7 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
 
     #region LOAD LEVEL GUN
 
-    [Header("Load Data Gun")]
+    [Header("Load Data Gun"), Tooltip("danh sach sung su dung trong man choi")]
     public TextAsset levelGunData;
 
     private void LoadLevelGunFromCSV(List<LevelDT> levelDatas)
@@ -90,7 +89,7 @@ public class DataSheetExcel : SingletonComponent<DataSheetExcel>
     #endregion
 
     #region LOAD LEVEL CARD REWARD
-    [Header("Load Data Card Reward")]
+    [Header("Load Data Card Reward"), Tooltip("danh sach card nhan duoc khi ket thuc man choi")]
     public TextAsset levelCardRewardData;
 
     private void LoadLevelCardRewardFromCSV(List<LevelDT> levelDatas)

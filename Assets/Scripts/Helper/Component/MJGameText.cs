@@ -18,6 +18,14 @@ namespace MJGame.Extensions
                 text = GetComponent<TextMeshProUGUI>();
             }
         }
+
+        private void OnEnable()
+        {
+            if (text == null)
+            {
+                text = GetComponent<TextMeshProUGUI>();
+            }
+        }
         public void TextLoading(string value)
         {
             text.text = value;

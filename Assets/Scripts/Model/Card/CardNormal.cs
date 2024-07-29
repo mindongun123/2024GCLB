@@ -1,12 +1,15 @@
 using MJGame;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Card : MonoBehaviour, ICard
+public class CardNormal : MonoBehaviour, ICard
 {
-    public CardDT cardData;
+    [ReadOnly]
+    public EnumsNameCard _nameCard = EnumsNameCard.CardNormal;
+    public CardSO cardData;
 
-    public Card(CardDT cardData)
+    public CardNormal(CardSO cardData)
     {
         this.cardData = cardData;
     }
