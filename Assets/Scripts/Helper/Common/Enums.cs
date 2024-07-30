@@ -1,7 +1,7 @@
 
 public enum EnumsStateGame
 {
-    None, Start, Player, Monster, End
+    None, Player, Monster, End, Loading
 }
 
 

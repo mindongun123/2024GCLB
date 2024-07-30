@@ -16,7 +16,6 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
 
     [Header("Select")]
     [SerializeField] public CardNormal cardSelect;
-    // [SerializeField] public Gun cardSelect;
     [SerializeField] public Monster monsterSelect;
 
     public void HandleCard(ICard _card)
@@ -48,6 +47,7 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
         else
         {
             PlayerShoot(monsterSelect.keyPosition);
+            Enums.stateGame = EnumsStateGame.Loading;
         }
     }
 
@@ -57,23 +57,27 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
         HandleGunDirection();
         lsMonster = levelGamePlayController.SearchMonster(_pos, cardSelect.cardData);
 
-        AnimationMonsterSelect();
+        MonsterAnimationWhenShot();
     }
 
-    public void AnimationMonsterSelect()
+    private void HandleGunDirection()
+    {
+    }
+
+    /// <summary>
+    /// ham nay de xu ly cac effect bat ki ma sung tao ra ve phi monster 
+    /// </summary>
+    private void MonsterAnimationWhenShot()
     {
         foreach (var item in lsMonster)
         {
-            item.monsterAnimation.AnimationSetState(new MonsterStateDie(item.monsterAnimation));
+            item.UpdateHealth(-gunSellect._damage);// chen cac effect, damage sung gay ra vao day
         }
 
         ResetHandle();
     }
 
-    public void HandleGunDirection()
-    {
 
-    }
     public void ResetHandle()
     {
         this.cardSelect.DisableCard();
@@ -81,4 +85,14 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
         this.monsterSelect = null;
         lsMonster = new List<Monster>();
     }
+
+
+
+    #region  Test Gun
+
+    [Header("Test")]
+    [SerializeField] public TestGunSelectCurrent gunSellect;
+
+    #endregion
+
 }

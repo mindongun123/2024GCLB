@@ -37,14 +37,19 @@ public class Monster : MonoBehaviour
     {
         this.monsterData = monsterData;
         this.keyPosition = keyPosition;
+
+        StartCoroutine(monsterUI.UpdateHealth(0, monsterData.GetHealthMax()));
     }
 
     private void OnMouseDown()
     {
+        if (Enums.stateGame != EnumsStateGame.Player) return;
+
         SingletonComponent<HandleGamePlay>.Instance.SelectMonster(this);
     }
 
 
+    #region Update Attribute Monster
 
     [Button]
     public void UpdateStateMonsterCurrent()
@@ -56,38 +61,49 @@ public class Monster : MonoBehaviour
     public void UpdateHealth(int _value)
     {
         StartCoroutine(UpdateHealthIE(_value));
+
+        IEnumerator UpdateHealthIE(int _value)
+        {
+            int _health = monsterData.GetHealth();
+            int _to = _health + _value;
+
+            _to = _to < monsterData.GetHealthMax() ? _to : monsterData.GetHealthMax();
+
+            if (_health < _to)
+            {
+                // hieu ung cong them mau
+                Debug.Log("Hieu ung cong them mau");
+            }
+            if (_health > _to)
+            {
+                // hieu ung tru mau 
+                Debug.Log("Hieu ung tru mau");
+                monsterAnimation.AnimationSetState(new MonsterStateHit(monsterAnimation));
+            }
+
+            _to = _to > 0 ? _to : 0;
+
+            monsterData.SetHealth(_to);
+            
+            yield return StartCoroutine(monsterUI.UpdateHealth(_health, _to));
+            yield return StartCoroutine(SingletonComponent<GameManager>.Instance.NextTurnIE());
+
+            if (_to == 0)
+            {
+                // hieu ung chet
+                Debug.Log("Hieu ung chet");
+                DestroyMonster();
+            }
+            yield return null;
+        }
     }
-    private IEnumerator UpdateHealthIE(int _value)
-    {
-        int _health = monsterData.GetHealth();
-        int _to = _health + _value;
 
-        _to = _to < monsterData.GetHealthMax() ? _to : monsterData.GetHealthMax();
-
-        if (_health < _to)
-        {
-            // hieu ung cong them mau
-            Debug.Log("Hieu ung cong them mau");
-        }
-        else if (_health > _to)
-        {
-            // hieu ung tru mau 
-            Debug.Log("Hieu ung tru mau");
-        }
-        _to = _to > 0 ? _to : 0;
-
-        monsterData.SetHealth(_to);
-        yield return StartCoroutine(monsterUI.UpdateHealth(_health, _to));
-
-        if (_to == 0)
-        {
-            DestroyMonster();
-        }
-        yield return null;
-    }
+    #endregion
 
     public void DestroyMonster()
     {
-        monsterAnimation.AnimationSetState(new MonsterStateDie(monsterAnimation));
+        monsterAnimation._isDie = true;
+        monsterAnimation.StateCurrent = new MonsterStateDie(monsterAnimation);
+        monsterAnimation.StateCurrent.EnterState();
     }
 }

@@ -21,6 +21,8 @@ public class CardNormal : MonoBehaviour, ICard
 
     public void OnClickCard()
     {
+        if (Enums.stateGame != EnumsStateGame.Player) return;
+
         SingletonComponent<HandleGamePlay>.Instance.HandleCard(this);
     }
 

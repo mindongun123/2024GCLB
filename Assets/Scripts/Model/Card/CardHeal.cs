@@ -25,6 +25,7 @@ public class CardHeal : MonoBehaviour, ICard, ICardHelp
 
     public void OnClickCard()
     {
+        if (Enums.stateGame != EnumsStateGame.Player) return;
         SingletonComponent<HandleGamePlay>.Instance.HandleCard(this);
     }
 

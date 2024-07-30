@@ -487,10 +487,10 @@ GameObject:
   - component: {fileID: 1412280409723653543}
   - component: {fileID: 3679710849815177002}
   - component: {fileID: 5138479936519163516}
-  - component: {fileID: 1513950584210807367}
   - component: {fileID: -2014206768983689664}
-  - component: {fileID: 4840000769559992806}
+  - component: {fileID: 1513950584210807367}
   - component: {fileID: 5847439266744162082}
+  - component: {fileID: 4840000769559992806}
   m_Layer: 0
   m_Name: 0_Kappo
   m_TagString: Untagged
@@ -616,20 +616,9 @@ MonoBehaviour:
     id: 0
     state: 
     _health: 0
+    _healthMax: 0
   monsterUI: {fileID: 5847439266744162082}
   keyPosition: {x: 0, y: 0}
---- !u!114 &1513950584210807367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7660269872085168610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b45e9645f06d24fbc6a70c79026cbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-2014206768983689664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,6 +633,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 0
   monsterSO: {fileID: 11400000, guid: 0351b40755b279b459a6a3b2cd83823b, type: 2}
+--- !u!114 &1513950584210807367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7660269872085168610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b45e9645f06d24fbc6a70c79026cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5847439266744162082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7660269872085168610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87efc523d918704bada4c65d0d8035a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthSlider: {fileID: 1952306311557286761}
+  sprites:
+  - {fileID: 21300000, guid: 49a6f38d3a37f114a87ee639ac0a89f1, type: 3}
+  - {fileID: 21300000, guid: 6c71783bc4f62974880eff15be5e50a2, type: 3}
+  - {fileID: 21300000, guid: 46f0a128d1c06604c8771f5b9d4d3ef2, type: 3}
+  - {fileID: 21300000, guid: 7d2b003e8058ad24d82c60f7be758292, type: 3}
+  - {fileID: 21300000, guid: 6a3b1c0e3fbc9194892fcd74fef01f80, type: 3}
+  - {fileID: 21300000, guid: 68bfd883d562db34da8a5947dd0880da, type: 3}
+  imageStateCurrent: {fileID: 3495891617152056117}
 --- !u!61 &4840000769559992806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -670,27 +692,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.515819, y: 2.800908}
   m_EdgeRadius: 0
---- !u!114 &5847439266744162082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7660269872085168610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a87efc523d918704bada4c65d0d8035a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthSlider: {fileID: 1952306311557286761}
-  sprites:
-  - {fileID: 21300000, guid: 49a6f38d3a37f114a87ee639ac0a89f1, type: 3}
-  - {fileID: 21300000, guid: 6c71783bc4f62974880eff15be5e50a2, type: 3}
-  - {fileID: 21300000, guid: 46f0a128d1c06604c8771f5b9d4d3ef2, type: 3}
-  - {fileID: 21300000, guid: 7d2b003e8058ad24d82c60f7be758292, type: 3}
-  - {fileID: 21300000, guid: 6a3b1c0e3fbc9194892fcd74fef01f80, type: 3}
-  - {fileID: 21300000, guid: 68bfd883d562db34da8a5947dd0880da, type: 3}
-  imageStateCurrent: {fileID: 3495891617152056117}
 --- !u!1 &7690042349733617628
 GameObject:
   m_ObjectHideFlags: 0

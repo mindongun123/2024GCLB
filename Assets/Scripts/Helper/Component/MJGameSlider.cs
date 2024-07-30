@@ -41,7 +41,7 @@ namespace MJGame.Extensions
             slider.value = _value;
             if (text != null)
             {
-                text.TextLoading(_value.ToString());
+                text.TextLoading(((int)_value).ToString());
             }
         }
     }
