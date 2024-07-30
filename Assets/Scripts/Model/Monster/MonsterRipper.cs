@@ -7,7 +7,7 @@ public class MonsterRipper : MonoBehaviour, IMonster
 { 
     [ReadOnly]
 
-    public EnumsNameMonster _name = EnumsNameMonster.Ripper;
+    public EnumsNameMonster _name = EnumsNameMonster.MonsterRipper;
     public MonsterSO monsterSO;
 
     public void EffectMonster()

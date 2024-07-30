@@ -82,7 +82,7 @@ public class Monster : MonoBehaviour
             _to = _to > 0 ? _to : 0;
 
             monsterData.SetHealth(_to);
-            
+
             yield return StartCoroutine(monsterUI.UpdateHealth(_health, _to));
             yield return StartCoroutine(SingletonComponent<GameManager>.Instance.NextTurnIE());
 
@@ -99,7 +99,7 @@ public class Monster : MonoBehaviour
 
     public void DestroyMonster()
     {
-        monsterAnimation._isDie = true;
+        monsterAnimation.IsDie = true;
         monsterAnimation.StateCurrent = new MonsterStateDie(monsterAnimation);
         monsterAnimation.StateCurrent.EnterState();
     }

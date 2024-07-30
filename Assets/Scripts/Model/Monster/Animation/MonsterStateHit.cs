@@ -24,9 +24,8 @@ public class MonsterStateHit : MJStateAnimation
     }
     public override void ExitState()
     {
-        if (!kstate._isDie)
+        if (!kstate.IsDie)
         {
-            Debug.Log(kstate._isDie);
             kstate.StateCurrent = new MonsterStateIdle(kstate);
             kstate.StateCurrent.EnterState();
         }

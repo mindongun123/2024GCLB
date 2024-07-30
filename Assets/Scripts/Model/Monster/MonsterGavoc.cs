@@ -7,7 +7,7 @@ public class MonsterGavoc : MonoBehaviour, IMonster
 {
     [ReadOnly]
 
-    public EnumsNameMonster _name = EnumsNameMonster.Gavoc;
+    public EnumsNameMonster _name = EnumsNameMonster.MonsterGavoc;
     public MonsterSO monsterSO;
 
     public void EffectMonster()

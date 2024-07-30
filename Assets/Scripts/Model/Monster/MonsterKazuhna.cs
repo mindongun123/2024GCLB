@@ -6,7 +6,7 @@ using UnityEngine;
 public class MonsterKazuhna : MonoBehaviour, IMonster
 { 
     [ReadOnly]
-    public EnumsNameMonster _name = EnumsNameMonster.Kazuhna;
+    public EnumsNameMonster _name = EnumsNameMonster.MonsterKazuhna;
     public MonsterSO monsterSO;
 
     public void EffectMonster()

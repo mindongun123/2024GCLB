@@ -37,8 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Helper\Interface\IMonster.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterScarlett.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Helpers\HelperFunctions.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
      <Compile Include="Assets\Scripts\Controller\LevelGamePlayController.cs" />
      <Compile Include="Assets\Scripts\Model\Card\CardNormal.cs" />
      <Compile Include="Assets\Scripts\Helper\Component\MJGameText.cs" />
@@ -67,7 +69,10 @@
      <Compile Include="Assets\Scripts\Model\Monster\MonsterKazuhna.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterGavoc.cs" />
      <Compile Include="Assets\Scripts\Model\Card\CardShrededShot.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
      <Compile Include="Assets\Scripts\Model\Card\CardShield.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\Animation\MonsterStateDie.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Demo Scene\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Model\LevelDT.cs" />
@@ -80,12 +85,19 @@
      <Compile Include="Assets\Scripts\Model\Monster\Animation\MJStateAnimation.cs" />
      <Compile Include="Assets\Scripts\Controller\HandlePlayer.cs" />
      <Compile Include="Assets\Scripts\Helper\Controller\SingletonComponent.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\GunType.cs" />
      <Compile Include="Assets\Scripts\Helper\MJGameSave.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterCaster.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\Animation\MonsterAnimation.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Helpers\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterSO.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterModarlo.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Scripts\Helper\MJGameValuables.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterRipper.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterOtto.cs" />
@@ -100,20 +112,14 @@
      <Compile Include="Assets\Scripts\Helper\Interface\ICard.cs" />
      <Compile Include="Assets\Scripts\Controller\HandleGamePlay.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterKappo.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
-     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Scripts\Model\Gun\GunDT.cs" />
-     <Compile Include="Assets\Scripts\Model\Gun\GunEffect.cs" />
-     <Compile Include="Assets\Scripts\Model\Gun\GunType.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\Gun.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\GunRifle.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\GunElectric.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\GunNerf.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\GunScanner.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\GunFlameThrower.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\GunLazerCanon.cs" />
+     <Compile Include="Assets\Scripts\Helper\Interface\IGun.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Spine\version.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -361,6 +367,9 @@
     <Reference Include="Sirenix.Reflection.Editor">
         <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="DemiLib">
+        <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+    </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
         <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
     </Reference>
@@ -373,20 +382,17 @@
     <Reference Include="Sirenix.Utilities">
         <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Sirenix.Serialization">
-        <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-        <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="DemiLib">
-        <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
         <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="Sirenix.Serialization">
+        <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
+    </Reference>
     <Reference Include="DOTweenPro">
         <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities.Editor">
+        <HintPath>C:\mindongun\MJGame\Game\GCLB\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.43f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

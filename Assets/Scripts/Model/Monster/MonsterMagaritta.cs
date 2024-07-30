@@ -6,7 +6,7 @@ using UnityEngine;
 public class MonsterMagaritta : MonoBehaviour, IMonster
 { 
     [ReadOnly]
-    public EnumsNameMonster _name = EnumsNameMonster.Magaritta;
+    public EnumsNameMonster _name = EnumsNameMonster.MonsterMagaritta;
     public MonsterSO monsterSO;
 
     public void EffectMonster()

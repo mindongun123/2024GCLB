@@ -27,7 +27,12 @@ public class MonsterAnimation : MonoBehaviour, IState, IStateAnimation
         set => stateCurrent = value;
     }
 
-    public bool _isDie = false;
+    private bool _isDie = false;
+    public bool IsDie
+    {
+        get => _isDie;
+        set => _isDie = value;
+    }
 
     private void OnValidate()
     {

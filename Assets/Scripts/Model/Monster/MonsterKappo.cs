@@ -7,7 +7,7 @@ public class MonsterKappo : MonoBehaviour, IMonster
 {
     [ReadOnly]
 
-    public EnumsNameMonster _name = EnumsNameMonster.Kappo;
+    public EnumsNameMonster _name = EnumsNameMonster.MonsterKappo;
     public MonsterSO monsterSO;
 
     public void EffectMonster()

@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using UnityEngine;
+
+public class GunLazerCanon : MonoBehaviour, IGun
+{
+    [Header("Data")]
+    [ReadOnly]
+    public EnumsNameGun nameGun = EnumsNameGun.GunLazerCanon;
+
+    [ReadOnly]
+    public int _damage = 1;
+    
+    [ReadOnly]
+    public Sprite _sprite;
+}
