@@ -48,6 +48,8 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
         {
             PlayerShoot(monsterSelect.keyPosition);
             Enums.stateGame = EnumsStateGame.Loading;
+
+            SingletonComponent<GameManager>.Instance.LoadingTurnCurrent();
         }
     }
 

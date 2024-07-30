@@ -6,3 +6,7 @@ public interface IMonster
 {
     public abstract void EffectMonster();
 }
+
+public interface IMonterEffect
+{
+}

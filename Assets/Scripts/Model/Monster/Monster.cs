@@ -72,12 +72,10 @@ public class Monster : MonoBehaviour
             if (_health < _to)
             {
                 // hieu ung cong them mau
-                Debug.Log("Hieu ung cong them mau");
             }
             if (_health > _to)
             {
                 // hieu ung tru mau 
-                Debug.Log("Hieu ung tru mau");
                 monsterAnimation.AnimationSetState(new MonsterStateHit(monsterAnimation));
             }
 
@@ -91,7 +89,6 @@ public class Monster : MonoBehaviour
             if (_to == 0)
             {
                 // hieu ung chet
-                Debug.Log("Hieu ung chet");
                 DestroyMonster();
             }
             yield return null;

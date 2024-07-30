@@ -12,7 +12,6 @@ public class MonsterStateHit : MJStateAnimation
 
     public override void EnterState()
     {
-        Debug.Log("Enter Hit");
         kstate.SkeAnimation.AnimationName = "hit";
         kstate.SkeAnimation.loop = false;
         kstate.SkeAnimation.Initialize(true);

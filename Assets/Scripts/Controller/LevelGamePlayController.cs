@@ -21,7 +21,7 @@ public class LevelGamePlayController : SingletonComponent<LevelGamePlayControlle
     {
         yield return StartCoroutine(SetListDataMonsterInLevel());
         yield return StartCoroutine(SetListCardInLevel());
-        Debug.Log("Complete Set Data Game Play In Level");
+        Debug.Log("Complete Loading Game Play In Level");
     }
 
     private IEnumerator SetListDataMonsterInLevel()
