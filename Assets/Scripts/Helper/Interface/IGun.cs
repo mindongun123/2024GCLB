@@ -8,6 +8,7 @@ public interface IGun
 
 public interface IEffectGun
 {
+    public abstract void HandleEffect();
 }
 
 public interface ITypeGun

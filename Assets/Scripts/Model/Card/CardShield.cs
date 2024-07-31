@@ -13,11 +13,26 @@ public class CardShield : MonoBehaviour, ICard, ICardHelp
 
     public Sprite _sprite;
 
-    public int _shield;
+    [Header("Data")]
+    public int _shield = 2;
+
+    public int Mana
+    {
+        get => _mana;
+        set => _mana = value;
+    }
+    public int _mana;
 
     private void Start()
     {
         GetComponent<Image>().sprite = _sprite;
+        SetDataStart();
+
+    }
+    public void SetDataStart()
+    {
+        _shield = 2;
+        Mana= _mana;
     }
     public void DisableCard()
     {
@@ -35,4 +50,5 @@ public class CardShield : MonoBehaviour, ICard, ICardHelp
     {
         throw new System.NotImplementedException();
     }
+
 }

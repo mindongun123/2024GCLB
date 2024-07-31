@@ -57,4 +57,9 @@ public class MonsterAnimation : MonoBehaviour, IState, IStateAnimation
         StateCurrent = state;
         StateCurrent.EnterState();
     }
+
+    public void AnimationTimeScale(float _timeScale)
+    {
+        SkeAnimation.timeScale = _timeScale;
+    }
 }

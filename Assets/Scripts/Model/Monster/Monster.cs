@@ -78,19 +78,20 @@ public class Monster : MonoBehaviour
                 // hieu ung tru mau 
                 monsterAnimation.AnimationSetState(new MonsterStateHit(monsterAnimation));
             }
-
             _to = _to > 0 ? _to : 0;
 
             monsterData.SetHealth(_to);
-
+            if (_to == 0)
+            {
+                monsterAnimation.IsDie = true;
+            }
             yield return StartCoroutine(monsterUI.UpdateHealth(_health, _to));
-            yield return StartCoroutine(SingletonComponent<GameManager>.Instance.NextTurnIE());
-
             if (_to == 0)
             {
                 // hieu ung chet
                 DestroyMonster();
             }
+            yield return StartCoroutine(SingletonComponent<GameManager>.Instance.NextTurnIE());
             yield return null;
         }
     }
@@ -99,7 +100,6 @@ public class Monster : MonoBehaviour
 
     public void DestroyMonster()
     {
-        monsterAnimation.IsDie = true;
         monsterAnimation.StateCurrent = new MonsterStateDie(monsterAnimation);
         monsterAnimation.StateCurrent.EnterState();
     }

@@ -12,6 +12,7 @@ public class MonsterStateHit : MJStateAnimation
 
     public override void EnterState()
     {
+        base.EnterState();
         kstate.SkeAnimation.AnimationName = "hit";
         kstate.SkeAnimation.loop = false;
         kstate.SkeAnimation.Initialize(true);
@@ -19,11 +20,15 @@ public class MonsterStateHit : MJStateAnimation
         IEnumerator Delay()
         {
             yield return new WaitForSeconds(1);
-            kstate.StateCurrent.ExitState();
+            if (!kstate.IsDie)
+            {
+                kstate.StateCurrent.ExitState();
+            }
         }
     }
     public override void ExitState()
     {
+        base.ExitState();
         if (!kstate.IsDie)
         {
             kstate.StateCurrent = new MonsterStateIdle(kstate);

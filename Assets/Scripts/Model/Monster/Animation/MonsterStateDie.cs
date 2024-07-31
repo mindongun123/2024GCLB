@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using MJGame;
-using Spine.Unity;
-using UnityEditor.Hardware;
 using UnityEngine;
 
 public class MonsterStateDie : MJStateAnimation
@@ -11,8 +8,9 @@ public class MonsterStateDie : MJStateAnimation
     {
     }
 
-    public override void EnterState( )
+    public override void EnterState()
     {
+        base.EnterState();
         kstate.SkeAnimation.AnimationName = "die";
         kstate.SkeAnimation.loop = false;
         kstate.SkeAnimation.Initialize(true);
@@ -25,7 +23,8 @@ public class MonsterStateDie : MJStateAnimation
     }
     public override void ExitState()
     {
-        Debug.Log("DESTROY MONSTER");  
+        base.ExitState();
+        Debug.Log("DESTROY MONSTER");
         GameObject.Destroy(kstate.gameObject);
     }
     public override void UpdateState()

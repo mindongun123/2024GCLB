@@ -34,7 +34,6 @@ public class GameManager : SingletonComponent<GameManager>
     [Button]
     public void LoadingTurnCurrent()
     {
-        Debug.Log("LoadingTurnCurrent");
         textTurnLoading.TextLoading(Enums.stateGame.ToString());
 
         textTurnLoading.GetComponent<RectTransform>().DOAnchorPosX(0, 0.5f).SetEase(Ease.Linear).OnComplete(() =>

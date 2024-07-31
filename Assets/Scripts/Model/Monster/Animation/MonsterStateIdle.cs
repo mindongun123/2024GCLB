@@ -11,6 +11,7 @@ public class MonsterStateIdle : MJStateAnimation
 
     public override void EnterState()
     {
+       base.EnterState();
         kstate.SkeAnimation.AnimationName = "idle";
         kstate.SkeAnimation.loop = true;
         kstate.SkeAnimation.Initialize(true);

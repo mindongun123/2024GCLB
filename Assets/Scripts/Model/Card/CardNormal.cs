@@ -9,6 +9,13 @@ public class CardNormal : MonoBehaviour, ICard
     public EnumsNameCard _nameCard = EnumsNameCard.CardNormal;
     public CardSO cardData;
 
+    [ShowInInspector]
+    public int Mana
+    {
+        get => cardData._mana;
+        set => cardData._mana = value;
+    }
+
     public CardNormal(CardSO cardData)
     {
         this.cardData = cardData;
@@ -17,6 +24,7 @@ public class CardNormal : MonoBehaviour, ICard
     private void Start()
     {
         GetComponent<Image>().sprite = cardData._sprite;
+        Mana = cardData._mana;
     }
 
     public void OnClickCard()

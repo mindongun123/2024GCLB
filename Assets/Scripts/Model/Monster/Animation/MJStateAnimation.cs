@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using Spine.Unity;
 using UnityEngine;
 
@@ -16,10 +15,12 @@ namespace MJGame
 
         public virtual void EnterState()
         {
+            Debug.Log("EnterState: " + this.ToString());
         }
 
         public virtual void ExitState()
         {
+            Debug.Log("ExitState: " + this.ToString());
         }
 
         public abstract void UpdateState();

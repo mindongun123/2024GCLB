@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class GunNerf : MonoBehaviour, IGun
+public class GunNerf : MonoBehaviour, IGun, IEffectGun
 {
     [Header("Data")]
     [ReadOnly]
@@ -14,4 +14,9 @@ public class GunNerf : MonoBehaviour, IGun
 
     [ReadOnly]
     public Sprite _sprite;
+
+    public void HandleEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

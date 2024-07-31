@@ -10,6 +10,7 @@ public class MonsterStateAttack : MJStateAnimation
 
     public override void EnterState()
     {
+        base.EnterState();
         kstate.SkeAnimation.AnimationName = "attack";
         kstate.SkeAnimation.loop = false;
         kstate.SkeAnimation.Initialize(true);
@@ -23,6 +24,7 @@ public class MonsterStateAttack : MJStateAnimation
     }
     public override void ExitState()
     {
+        base.ExitState();
         kstate.StateCurrent = new MonsterStateIdle(kstate);
         kstate.StateCurrent.EnterState();
     }

@@ -17,7 +17,13 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
     [Header("Select")]
     [SerializeField] public CardNormal cardSelect;
     [SerializeField] public Monster monsterSelect;
+    [SerializeField] public Gun gunSelect;
 
+
+    /// <summary>
+    /// Sau nay se co doan nay se co doan check Card xem co mua duoc hay khong
+    /// </summary>
+    /// <param name="_card"></param>
     public void HandleCard(ICard _card)
     {
         if (_card is CardNormal cardNormal)
@@ -31,10 +37,10 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
         }
     }
 
-    // public void SelectGun(Gun gun)
-    // {
-    //     this.gunSelect = gun;
-    // }
+    public void SelectGun(Gun gun)
+    {
+        this.gunSelect = gun;
+    }
 
     public void SelectMonster(Monster monster)
     {
@@ -43,9 +49,11 @@ public class HandleGamePlay : SingletonComponent<HandleGamePlay>
     [Button]
     public void OnClickPlayerShoot()
     {
+        // Check card xem co mua duoc khong -> lam cho button bi disable hoac cho bai disable
         if (monsterSelect == null || cardSelect == null) return;
         else
         {
+            SingletonComponent<HandlePlayer>.Instance.UpdateMana(cardSelect);// tru mana mua bai
             PlayerShoot(monsterSelect.keyPosition);
             Enums.stateGame = EnumsStateGame.Loading;
 

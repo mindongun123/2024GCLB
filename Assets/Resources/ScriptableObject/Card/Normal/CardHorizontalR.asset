@@ -16,4 +16,4 @@ MonoBehaviour:
   path:
   - {x: 0, y: 0}
   - {x: 0, y: -1}
-  _mana: 0
+  _mana: 10

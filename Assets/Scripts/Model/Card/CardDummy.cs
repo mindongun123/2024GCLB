@@ -13,11 +13,28 @@ public class CardDummy : MonoBehaviour, ICard, ICardHelp
     public EnumsNameCard _nameCard = EnumsNameCard.CardDummy;
 
     public Sprite _sprite;
-    public int _helth;// 5/10/15
+
+    private int[] healths = { 5, 10, 15 };
+    [Header("Data")]
+    public int _helth = 5;// 5/10/15
+
+    public int Mana
+    {
+        get => _mana;
+        set => _mana = value;
+    }
+    public int _mana;
 
     private void Start()
     {
         GetComponent<Image>().sprite = _sprite;
+        SetDataStart();
+    }
+
+    public void SetDataStart()
+    {
+        _helth = healths[Random.Range(0, healths.Length)];
+        Mana = _mana;
     }
     public void DisableCard()
     {
@@ -33,4 +50,6 @@ public class CardDummy : MonoBehaviour, ICard, ICardHelp
     {
         throw new System.NotImplementedException();
     }
+
+
 }

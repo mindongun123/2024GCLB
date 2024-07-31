@@ -11,12 +11,28 @@ public class CardHeal : MonoBehaviour, ICard, ICardHelp
     public EnumsNameCard _nameCard = EnumsNameCard.CardHeal;
 
     public Sprite _sprite;
+    [Header("Data")]
 
-    public int _heal;
+    public int _heal = 10;
 
+    public int Mana
+    {
+        get => _mana;
+        set => _mana = value;
+    }
+
+    public int _mana;
     private void Start()
     {
         GetComponent<Image>().sprite = _sprite;
+        SetDataStart();
+
+    }
+
+    public void SetDataStart()
+    {
+        _heal = 10;
+        Mana = _mana;
     }
     public void DisableCard()
     {
@@ -34,4 +50,6 @@ public class CardHeal : MonoBehaviour, ICard, ICardHelp
         // Test
         SingletonComponent<HandlePlayer>.Instance.UpdateHealth(this);
     }
+
+
 }

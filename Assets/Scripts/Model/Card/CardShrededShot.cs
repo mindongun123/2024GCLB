@@ -5,19 +5,35 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardShrededShot : MonoBehaviour, ICard,ICardHelp
+public class CardShrededShot : MonoBehaviour, ICard, ICardHelp
 {
     [ReadOnly]
-    public EnumsNameCard _nameCard= EnumsNameCard.CardShrededShot;
+    public EnumsNameCard _nameCard = EnumsNameCard.CardShrededShot;
     public Sprite _sprite;
+    [Header("Data")]
+    public int _damageSub = 2;
+    public int _damageAdd = 1;
 
-    public int _damageSub;
-    public int _damageAdd;
-
+  public int Mana
+    {
+        get => _mana;
+        set => _mana = value;
+    }
+    public int _mana;
 
     private void Start()
     {
         GetComponent<Image>().sprite = _sprite;
+        SetDataStart();
+
+    }
+    
+    public void SetDataStart()
+    {
+        _damageAdd = 1;
+        _damageSub = 2;
+        Mana= _mana;
+
     }
     public void DisableCard()
     {
@@ -35,4 +51,5 @@ public class CardShrededShot : MonoBehaviour, ICard,ICardHelp
     {
         throw new System.NotImplementedException();
     }
+
 }

@@ -18,7 +18,8 @@ public class MonsterUI : MonoBehaviour
 
     public IEnumerator UpdateHealth(int _health, int _to)
     {
-        Debug.Log("EffectUpdateHealth");
         yield return _healthSlider.StartCoroutine(_healthSlider.ChangeValueIE(_health, _to, 1f));
+        Debug.Log("EffectUpdateHealth");
+
     }
 }

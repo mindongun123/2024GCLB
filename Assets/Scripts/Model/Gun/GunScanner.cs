@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 
-public class GunScanner : MonoBehaviour, IGun
+public class GunScanner : MonoBehaviour, IGun, IEffectGun
 {
     [Header("Data")]
     [ReadOnly]
@@ -14,4 +14,9 @@ public class GunScanner : MonoBehaviour, IGun
     
     [ReadOnly]
     public Sprite _sprite;
+
+    public void HandleEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }
