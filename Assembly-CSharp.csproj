@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Model\Gun\GunRifle.cs" />
      <Compile Include="Assets\Scripts\Helper\Common\Enums.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\Animation\MonsterStateHit.cs" />
+     <Compile Include="Assets\Scripts\Helper\Interface\ISetDataStart.cs" />
      <Compile Include="Assets\Scripts\Controller\GameManager.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterUI.cs" />
      <Compile Include="Assets\Scripts\Model\Card\CardDummy.cs" />
@@ -100,6 +101,7 @@
      <Compile Include="Assets\Scripts\Model\Gun\GunScanner.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\Animation\MonsterAnimation.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Scripts\Model\Gun\HandleEffectGun.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\MidniteOilSoftware\Scripts\Helpers\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterSO.cs" />
@@ -120,8 +122,6 @@
      <Compile Include="Assets\Scripts\Helper\Interface\ICard.cs" />
      <Compile Include="Assets\Scripts\Controller\HandleGamePlay.cs" />
      <Compile Include="Assets\Scripts\Model\Monster\MonsterKappo.cs" />
-     <Compile Include="Assets\Scripts\Helper\Interface\ISetDataStart.cs" />
-     <Compile Include="Assets\Scripts\Model\Gun\HandleEffectGun.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Spine\version.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

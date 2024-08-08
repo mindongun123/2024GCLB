@@ -22,13 +22,13 @@ public class HandlePlayer : SingletonComponent<HandlePlayer>, ISetDataStart
 
     public void SetDataStart()
     {
-        healthText.TextLoading("Health Player: " + _health.ToString());
-        manaText.TextLoading("Mana Player: " + _mana.ToString());
+        healthText.TextLoading(_health.ToString());
+        manaText.TextLoading(_mana.ToString());
     }
     public void UpdateHealth(CardHeal cardHeal)
     {
         _health += cardHeal._heal;
-        healthText.TextLoading("Health Player: " + _health.ToString());
+        healthText.TextLoading(_health.ToString());
     }
     /// <summary>
     /// Sau nay doan nay se co doan check Card xem co mua duoc hay khong
@@ -38,6 +38,6 @@ public class HandlePlayer : SingletonComponent<HandlePlayer>, ISetDataStart
     {
         if (card == null) return;
         _mana -= card.Mana;
-        manaText.TextLoading("Mana Player: " + _mana.ToString());
+        manaText.TextLoading(_mana.ToString());
     }
 }

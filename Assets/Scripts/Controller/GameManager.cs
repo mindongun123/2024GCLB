@@ -35,12 +35,6 @@ public class GameManager : SingletonComponent<GameManager>
     public void LoadingTurnCurrent()
     {
         textTurnLoading.TextLoading(Enums.stateGame.ToString());
-
-        textTurnLoading.GetComponent<RectTransform>().DOAnchorPosX(0, 0.5f).SetEase(Ease.Linear).OnComplete(() =>
-        {
-            textTurnLoading.GetComponent<RectTransform>().DOAnchorPosX(-700, 0.5f).SetEase(Ease.Linear);
-        });
-
     }
     #endregion
 }
